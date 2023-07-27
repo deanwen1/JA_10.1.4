@@ -1,0 +1,14 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: creation-book-service
+  cloud:
+    stream:
+      kafka:
+        binder:
+          auto-add-partitions: true
+
+      bindings:
+        output:
+          destination: create-book

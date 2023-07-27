@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: check-book-service
+  cloud:
+    stream:
+      kafka:
+        binder:
+          auto-add-partitions: true
+      bindings:
+        input:
+          destination: create-book
+        output:
+          destination: store-book
+          contentType: application/json

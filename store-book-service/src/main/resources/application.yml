@@ -1,0 +1,14 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: store-book-service
+  cloud:
+    stream:
+      kafka:
+        binder:
+          auto-add-partitions: true
+      bindings:
+        input:
+          destination: store-book
+          contentType: application/json
